@@ -5,7 +5,7 @@ const sass = require('gulp-sass')(require('sass'));
 const cssnano = require('gulp-cssnano');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
-const file_include = require('gulp-file-include');
+const fileInclude = require('gulp-file-include');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
@@ -13,6 +13,10 @@ const browserSync = require('browser-sync').create();
 // Таска для HTML
 const html_task = () => {
   return src('src/app/*.html')
+    .pipe(fileInclude({
+      prefix: '@@',
+      basepath: '@file'
+    }))
     .pipe(dest('dist/'))
     .pipe(browserSync.stream());
 }
@@ -41,6 +45,17 @@ const img_task = () => {
   return src('src/app/imgs/**/*.{png,jpg,jpeg,svg}', {encoding: false})
     .pipe(imagemin())
     .pipe(dest('dist/imgs/'));
+}
+
+// Таска для Bootstrap
+const bootstrapCSS = () => {
+  return src('node_modules/bootstrap/dist/css/bootstrap.min.css')
+    .pipe(dest('dist/css'));
+}
+
+const bootstrapJS = () => {
+  return src('node_modules/bootstrap/dist/js/bootstrap.bundle.min.js')
+    .pipe(dest('dist/js'));
 }
 
 // Таска BrowserSync
