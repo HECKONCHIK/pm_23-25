@@ -1,6 +1,20 @@
-.text {
-  color: blue;
-}
+$primary: #333333;
+
 body {
-  background-color: red;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  color: $primary;
+  background-color: #DEDEDE;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+
+}
+
+.container-xl {
+  background-color: #FFFFFF;
+
+}
+
+.name {
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
 }

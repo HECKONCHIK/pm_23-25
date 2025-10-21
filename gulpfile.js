@@ -10,6 +10,9 @@ const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const browserSync = require('browser-sync').create();
 
+const bootstrapSassPath = 'node_modules/bootstrap/scss';
+
+
 // Таска для HTML
 const html_task = () => {
   return src('src/app/*.html')
@@ -23,9 +26,12 @@ const html_task = () => {
 
 // Таска для JS
 const js_task = () => {
-  return src('src/app/js/*.js')
+  return src([
+    'node_modules/bootstrap/dist/js/bootstrap.bundle.min.js',
+    'src/app/js/*.js'
+  ])
+    .pipe(concat('main.min.js'))
     .pipe(uglify())
-    .pipe(rename({ suffix: '.min' }))
     .pipe(dest('dist/js/'))
     .pipe(browserSync.stream());
 }
@@ -34,6 +40,7 @@ const js_task = () => {
 // Таска для SCSS
 const scss_task = () => {
   return src('src/app/scss/*.scss')
+    .pipe(sass({includePaths: [bootstrapSassPath]}).on('error', sass.logError))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min', extname: '.css' }))
     .pipe(dest('dist/css/'))
@@ -78,8 +85,12 @@ const watch_task = () => {
 }
 
 // Таска build
-const build = series(html_task, parallel(scss_task, js_task, img_task));
+const build = series(html_task, parallel(scss_task, js_task, img_task, bootstrapCSS, bootstrapJS));
 
+// Експортуємо таску build
+exports.build = build;
+
+// Таска default
 exports.default = series(
   build,
   parallel(browsersync_task, watch_task)
