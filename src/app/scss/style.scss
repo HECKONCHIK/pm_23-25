@@ -1,20 +1,17 @@
+@use './main/me.scss';
+
 $primary: #333333;
 
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Montserrat, sans-serif;
   color: $primary;
   background-color: #DEDEDE;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+//  padding: 20px 0;
 
 }
 
-.container-xl {
-  background-color: #FFFFFF;
-
-}
-
-.name {
-  font-family: Montserrat, "Helvetica Neue", sans-serif;
+ul {
+  list-style: none;
 }
