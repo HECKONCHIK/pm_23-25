@@ -77,9 +77,9 @@ const browsersync_task = () => {
 
 // Таска watch
 const watch_task = () => {
-  watch('src/app/*.html', html_task);
-  watch('src/app/js/*.js', js_task);
-  watch('src/app/scss/*.scss', scss_task);
+  watch('src/app/**/*.html', html_task);
+  watch('src/app/**/js/*.js', js_task);
+  watch('src/app/**/scss/*.scss', scss_task);
 
   watch('src/app/img//*.{png,jpg,jpeg,svg}', series(img_task, browserSync.reload));
 }

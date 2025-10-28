@@ -1,6 +1,12 @@
 @use './main/me.scss';
+@use './sidebar/skills.scss';
 
 $primary: #333333;
+
+.container-xl {
+  padding: 0px;
+  margin: 0px;
+}
 
 body {
   font-family: Montserrat, sans-serif;
@@ -14,4 +20,8 @@ body {
 
 ul {
   list-style: none;
+}
+
+.sidebar {
+  background-color: #f0f0f0;
 }
