@@ -1,3 +1,19 @@
 .progress {
   background-color: #d0d0d0;
 }
+
+.progress-skill-bar {
+  background-color: #e63946;
+  &:after {
+    content: "";
+    display: block;
+    width: 10px; // Розмір квадратика
+    height: 10px;
+    background-color: #e63946;
+    position: absolute;
+    right: -5px; // Виносимо на край, щоб він був помітний
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid white; // Для контрасту
+  }
+}
