@@ -1,4 +1,63 @@
-.container-xl {
-  background-color: #FFFFFF;
+.me {
+  padding: 50px;
 
+}
+
+.work {
+  color: #dc0a0a;
+
+  border-bottom: 2px solid black; // Чорна лінія товщиною 1px
+  padding-bottom: 5px; // Відступ між текстом і лінією
+  margin-bottom: 10px; // Відступ між лінією та наступним елементом (якщо є)
+}
+
+.name-section {
+  text-align: left; // Вирівнюємо весь вміст по лівому краю
+  /* Якщо потрібно, щоб батьківський контейнер був центрований, додайте сюди display: flex, justify-content: center */
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start; // Якщо потрібно, щоб весь блок був вирівняний по лівому краю всередині флекс-контейнера
+}
+
+.name-heading {
+  line-height: 0.9; // Зменшуємо міжрядковий інтервал для GARY T. та WALTON, щоб вони були ближче
+  margin-bottom: 10px; // Відступ між заголовком і описом роботи
+}
+
+.first-name {
+  display: block; // Щоб GARY T. був окремим рядком
+  font-family: 'Arial', sans-serif; // Використовуйте шрифт, як на зображенні
+  font-size: 50px; // Збільшуємо розмір
+  font-weight: 900; // Дуже жирний шрифт
+  color: #333; // Темно-сірий/чорний
+  letter-spacing: 0.05em; // Невеликий міжлітерний інтервал
+  margin-bottom: -5px; // Може знадобитися для точного налаштування відстані
+}
+
+.last-name {
+  display: block; // Щоб WALTON був окремим рядком
+  font-family: 'Arial', sans-serif; // Той самий шрифт
+  font-size: 50px; // Той самий розмір
+  font-weight: 200; // Тонший шрифт (Light)
+  color: #333;
+  letter-spacing: 0.1em; // Більший міжлітерний інтервал для тоншого шрифту
+  margin-top: -5px; // Може знадобитися для точного налаштування відстані
+}
+
+.work-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #e63946; // Червоний колір
+  text-transform: uppercase;
+  letter-spacing: 0.15em; // Широкий міжлітерний інтервал
+  margin-top: 20px; // Відступ між WALTON та цим текстом
+  margin-bottom: 10px; // Відступ перед лінією
+  line-height: 1.2; // Стандартний міжрядковий інтервал
+}
+
+.underline {
+  width: 150px; // Довжина лінії, як на зображенні 1
+  height: 1px;
+  background-color: black;
+  margin-top: 5px; // Відступ від тексту "GRAPHIC & WEB DESIGNER"
 }

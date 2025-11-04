@@ -1,19 +1,31 @@
 .progress {
   background-color: #d0d0d0;
+  overflow: visible;
 }
 
 .progress-skill-bar {
   background-color: #e63946;
-  &:after {
+  position: relative; // Ключове для позиціонування ::after
+  overflow: visible; // Дозволяємо ::after виходити за межі батьківського елемента, якщо потрібно
+
+  &::after {
     content: "";
     display: block;
-    width: 10px; // Розмір квадратика
-    height: 10px;
-    background-color: #e63946;
+    width: 8px; // Ширина вертикальної частини (ножки)
+    height: 100%; // Висота вертикальної частини (така ж як прогрес-бар)
+    background-color: #e63946; // Колір T-маркера
     position: absolute;
-    right: -5px; // Виносимо на край, щоб він був помітний
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid white; // Для контрасту
+    right: -4px; // Половина ширини ножки, щоб відцентрувати на кінці прогрес-бару
+    top: 0; // Починаємо з верхнього краю
+    transform: translateX(50%); // Додаткове вирівнювання, якщо потрібно
+
+    // Створюємо горизонтальну частину T-маркера за допомогою тіні
+    box-shadow:
+      -10px 0 0 0 #e63946, // Ліва частина
+      10px 0 0 0 #e63946; // Права частина
+
+    // Якщо хочете, щоб Т-подібний маркер був білим
+    // background-color: white;
+    // box-shadow: -10px 0 0 0 white, 10px 0 0 0 white;
   }
 }
