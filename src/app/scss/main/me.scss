@@ -1,63 +1,80 @@
+
 .me {
-  padding: 50px;
+  margin-bottom: 50px
 
 }
 
 .work {
   color: #dc0a0a;
 
-  border-bottom: 2px solid black; // Чорна лінія товщиною 1px
-  padding-bottom: 5px; // Відступ між текстом і лінією
-  margin-bottom: 10px; // Відступ між лінією та наступним елементом (якщо є)
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .name-section {
-  text-align: left; // Вирівнюємо весь вміст по лівому краю
-  /* Якщо потрібно, щоб батьківський контейнер був центрований, додайте сюди display: flex, justify-content: center */
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-start; // Якщо потрібно, щоб весь блок був вирівняний по лівому краю всередині флекс-контейнера
+  text-align: left;
 }
 
 .name-heading {
-  line-height: 0.9; // Зменшуємо міжрядковий інтервал для GARY T. та WALTON, щоб вони були ближче
-  margin-bottom: 10px; // Відступ між заголовком і описом роботи
+  line-height: 0.9;
+  margin-bottom: 10px;
 }
 
 .first-name {
-  display: block; // Щоб GARY T. був окремим рядком
-  font-family: 'Arial', sans-serif; // Використовуйте шрифт, як на зображенні
-  font-size: 50px; // Збільшуємо розмір
-  font-weight: 900; // Дуже жирний шрифт
-  color: #333; // Темно-сірий/чорний
-  letter-spacing: 0.05em; // Невеликий міжлітерний інтервал
-  margin-bottom: -5px; // Може знадобитися для точного налаштування відстані
+  display: block;
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  color: #333;
+  letter-spacing: 0.05em;
+  margin-bottom: 15px;
 }
 
 .last-name {
-  display: block; // Щоб WALTON був окремим рядком
-  font-family: 'Arial', sans-serif; // Той самий шрифт
-  font-size: 50px; // Той самий розмір
-  font-weight: 200; // Тонший шрифт (Light)
+  display: block;
+  font-family: 'Arial', sans-serif;
+  font-size: 50px;
+  font-weight: 200;
   color: #333;
-  letter-spacing: 0.1em; // Більший міжлітерний інтервал для тоншого шрифту
-  margin-top: -5px; // Може знадобитися для точного налаштування відстані
+  letter-spacing: 0.1em;
+  margin-top: -5px;
 }
 
 .work-title {
   font-family: 'Arial', sans-serif;
   font-size: 16px;
-  color: #e63946; // Червоний колір
+  color: #dc0a0a;
   text-transform: uppercase;
-  letter-spacing: 0.15em; // Широкий міжлітерний інтервал
-  margin-top: 20px; // Відступ між WALTON та цим текстом
-  margin-bottom: 10px; // Відступ перед лінією
-  line-height: 1.2; // Стандартний міжрядковий інтервал
+  letter-spacing: 0.15em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .underline {
-  width: 150px; // Довжина лінії, як на зображенні 1
-  height: 1px;
+  width: 100%;
+  height: 1.5px;
   background-color: black;
-  margin-top: 5px; // Відступ від тексту "GRAPHIC & WEB DESIGNER"
+  margin-top: 5px;
+  margin-bottom: 50px;
+}
+
+//ABOUT ME
+
+.aboutMe {
+  margin-left: 20px;
+}
+
+.col-6.name {
+  width: 355px;
+}
+
+.text {
+  white-space: nowrap;
+  word-spacing: -1px;
+}
+
+.adress {
+  color: #dc0a0a;
 }
