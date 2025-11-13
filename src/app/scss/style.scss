@@ -1,4 +1,6 @@
 @use './main/me.scss';
+@use './main/exp.scss';
+@use './sidebar/edu.scss';
 @use './sidebar/skills.scss';
 
 $primary: #333333;
@@ -17,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 100px 0;
-
+  text-align: justify;
 }
 
 ul {
@@ -30,7 +32,7 @@ a {
 }
 
 .main {
-  padding: 40px 0 40px 40px;
+//  padding: 40px 0 40px 40px;
 }
 
 .sidebar {

@@ -1,6 +1,5 @@
-
 .me {
-  margin-bottom: 50px
+  padding: 40px 0 0 40px;
 
 }
 
@@ -75,6 +74,65 @@
   word-spacing: -1px;
 }
 
-.adress {
-  color: #dc0a0a;
+.contact-list {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 20px;
+  /* !!! ВАЖЛИВО !!! Видаляємо стандартні маркери списку */
+  list-style: none;
+  padding-left: 0; /* Прибираємо стандартний відступ зліва */
+}
+
+/* Стилі для кожного контакту (залишається як було) */
+.contact-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.decorator {
+  padding-top: 15px;
+
+  border-left: 2.5px solid black;
+  height: auto;
+  margin-right: 15px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    padding: 2px;
+    top: -10px; /* Трохи вище початку тексту */
+    left: -5.5px; /* Зміщення, щоб квадратик був по центру лінії */
+    width: 10px;
+    height: 10px;
+    background-color: #e51d28;
+  }
+}
+
+/* Стилі для інформаційного блоку */
+.info {
+  flex-grow: 1;
+}
+
+/* Стилі для імені */
+.name {
+  font-size: 1.1em;
+  font-weight: 900; /* Дуже жирний */
+  color: #333;
+  margin: 0 0 5px 0;
+  text-transform: uppercase;
+}
+
+/* Стилі для адреси (червоний колір) */
+.address {
+  color: #e51d28; /* Червоний колір */
+  font-weight: 500;
+  font-size: 1em;
+  margin: 0 0 10px 0;
+}
+
+/* Стилі для телефону та email */
+.tel, .email {
+  color: #555;
+  font-size: 0.9em;
+  margin: 0 0 3px 0;
 }

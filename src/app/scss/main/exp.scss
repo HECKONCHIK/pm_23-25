@@ -1,0 +1,90 @@
+.exp {
+  padding: 0 40px 40px 40px;
+}
+
+.experience-list {
+  font-family: Arial, sans-serif;
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience-item {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.decorator {
+  padding-top: 15px;
+
+  border-left: 2.5px solid black;
+  height: auto;
+  margin-right: 15px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    padding: 2px;
+    top: -10px;
+    left: -5.5px;
+    width: 10px;
+    height: 10px;
+    background-color: #e51d28;
+  }
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+
+.company {
+  font-size: 1em;
+  font-weight: bold;
+  color: #333;
+  margin: 0;
+}
+
+.location {
+  font-size: 0.85em;
+  color: #666;
+  margin: 0;
+}
+
+.date {
+  display: inline-block;
+
+  background-color: #e51d28;
+  color: white;
+
+  width: 125px;
+  padding: 6px 0 6px 0;
+
+  font-size: 0.8em;
+
+  border-radius: 3px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.position {
+  font-size: 1.2em;
+  font-weight: 900;
+  color: #333;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 0.9em;
+  line-height: 1.6;
+  color: #555;
+  margin: 10px 0 0 0;
+}
