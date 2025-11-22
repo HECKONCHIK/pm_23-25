@@ -1,0 +1,78 @@
+$ring-bg-color: #e0e0e0;
+$ring-color: #db0a0a;
+$text-color-primary: #333;
+$text-color-secondary: #555;
+
+$circle-size: 100px;
+
+.lang {
+  margin-top: 40px;
+}
+
+.stats-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.circular-progress {
+  position: relative;
+  width: $circle-size;
+  height: $circle-size;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+    overflow: visible;
+
+    circle {
+      fill: none;
+      stroke-width: 6;
+
+      stroke-dasharray: 283;
+      stroke-dashoffset: 283;
+    }
+
+    .bg-ring {
+      stroke: $ring-bg-color;
+      stroke-dashoffset: 0;
+    }
+
+    .progress-ring {
+      stroke: $ring-color;
+      stroke-dashoffset: calc(283 - (283 * var(--percent) / 100));
+      transition: stroke-dashoffset 1s ease-in-out;
+
+      stroke-linecap: round;
+    }
+  }
+
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .percentage {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: $text-color-primary;
+      line-height: 1.1;
+    }
+
+    .label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: $text-color-secondary;
+      margin-top: 2px;
+      letter-spacing: 0.5px;
+    }
+  }
+}

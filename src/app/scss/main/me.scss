@@ -43,6 +43,7 @@
 .work-title {
   font-family: 'Arial', sans-serif;
   font-size: 16px;
+  font-weight: 300;
   color: #dc0a0a;
   text-transform: uppercase;
   letter-spacing: 0.15em;
@@ -56,7 +57,7 @@
   height: 1.5px;
   background-color: black;
   margin-top: 5px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
 //ABOUT ME
@@ -78,9 +79,8 @@
   font-family: Arial, sans-serif;
   max-width: 400px;
   margin: 20px;
-  /* !!! ВАЖЛИВО !!! Видаляємо стандартні маркери списку */
   list-style: none;
-  padding-left: 0; /* Прибираємо стандартний відступ зліва */
+  padding-left: 0;
 }
 
 /* Стилі для кожного контакту (залишається як було) */
@@ -100,19 +100,27 @@
     content: '';
     position: absolute;
     padding: 2px;
-    top: -10px; /* Трохи вище початку тексту */
-    left: -5.5px; /* Зміщення, щоб квадратик був по центру лінії */
+    top: -10px;
+    left: -5.5px;
     width: 10px;
     height: 10px;
     background-color: #e51d28;
   }
 }
 
-/* Стилі для інформаційного блоку */
 .info {
   flex-grow: 1;
 }
 
+.info-item {
+  border-left: 1.5px solid black;
+
+  padding-left: 10px;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 /* Стилі для імені */
 .name {
   font-size: 1.1em;
