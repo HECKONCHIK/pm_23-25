@@ -67,4 +67,15 @@ a {
   font-weight: 300;
 
   margin-bottom: 10px;
+
+  transition: transform 0.3s ease;
+  cursor: pointer;
+
+    &.active {
+      transform: rotate(90deg);
+    }
+}
+
+.contents {
+  visibility: visible;
 }

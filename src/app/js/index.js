@@ -8,21 +8,24 @@ const surname = 'WALTON'
 firstName.textContent = name;
 lastName.textContent = surname;
 
-// 2. Перебираємо кожну стрілку окремо
 arrows.forEach(function(arrow) {
-
   arrow.addEventListener("click", function() {
 
     const mainContainer = this.parentElement.parentElement;
+    const contents = mainContainer.querySelector(".contents");
 
-    const content = mainContainer.querySelector(".content");
+    if (!contents) return;
 
-    if (content.style.visibility === "hidden" || content.style.visibility === "") {
-      content.style.visibility = "visible";
-      this.style.transform = "rotate(0deg)";
-    } else {
-      content.style.visibility = "hidden";
-      this.style.transform = "rotate(90deg)";
+    // Якщо приховано -> показуємо і крутимо стрілку
+    if (contents.style.visibility === "hidden") {
+      contents.style.visibility = "visible";
+      this.classList.add("active");
+    }
+    // У всіх інших випадках (в т.ч. перший клік, якщо було visible) -> ховаємо і вертаємо стрілку
+    else {
+      contents.style.visibility = "hidden";
+      this.classList.remove("active");
     }
   });
 });
+
