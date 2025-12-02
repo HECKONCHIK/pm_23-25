@@ -1,9 +1,11 @@
+@use '../variables' as *;
+
 .progress {
-  background-color: #d0d0d0;
+  background-color: $ring-bg-color;
   overflow: visible;
 }
 
 .progress-skill-bar {
-  background-color: #e63946;
+  background-color: $ring-color;
   border-radius: inherit;
 }

@@ -1,3 +1,5 @@
+@use '../variables' as *;
+
 .exp {
   padding: 0 40px 40px 40px;
 }
@@ -28,7 +30,7 @@
     left: -5.5px;
     width: 10px;
     height: 10px;
-    background-color: #e51d28;
+    background-color: $ring-color;
   }
 }
 
@@ -46,7 +48,7 @@
 .company {
   font-size: 1em;
   font-weight: bold;
-  color: #333;
+  color: $text-color-primary;
   margin: 0;
 }
 
@@ -59,8 +61,8 @@
 .date {
   display: inline-block;
 
-  background-color: #e51d28;
-  color: white;
+  background-color: $ring-color;
+  color: $ring-bg-color;
 
   width: 125px;
   padding: 4px 0 4px 0;
@@ -77,7 +79,7 @@
 .position {
   font-size: 1.2em;
   font-weight: 900;
-  color: #333;
+  color: $text-color-primary;
   margin: 0 0 10px 0;
   text-transform: uppercase;
 }

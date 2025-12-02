@@ -28,9 +28,13 @@
   <div class="col-6 name">
     <div class="name-section">
       <div class="name-heading">
-        <span class="first-name">GARY T.</span>
-        <span class="last-name">WALTON</span>
+        <span class="first-name" id="first-name"></span> <!--   ОСЬ ТУТ ВИДНО РОБОТУ JS   -->
+        <span class="last-name" id="last-name"></span> <!--   ОСЬ ТУТ ВИДНО РОБОТУ JS   -->
       </div>
+<!--      <button onclick="toggleVisibility()">Toggle Content</button>-->
+<!--      <div id="myVisibleContent">-->
+<!--        This content will be hidden, but still take up space.-->
+<!--      </div>-->
       <p class="work-title">GRAPHIC & WEB DESIGNER</p>
       <div class="underline"></div> </div>
     <img
@@ -40,126 +44,140 @@
   </div>
   <div class="col-6 abt">
     <div class="aboutMe">
-      <h2><b>ABOUT ME</b></h2>
+      <div class="acardeon justify-content-between">
+        <h2><b>ABOUT ME</b></h2>
+        <span class="arrow"> > </span>
+      </div>
       <div class="underline"></div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Accusantium aliquam aliquid atque debitis dolorem esse eveniet
+          fugit itaque maxime nihil, odit provident
+          quidem quisquam quod rem sed suscipit tempora vel! Illo.</p>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusantium aliquam aliquid atque debitis dolorem esse eveniet
-        fugit itaque maxime nihil, odit provident
-        quidem quisquam quod rem sed suscipit tempora vel! Illo.</p>
+        <p class="text"><b>"Lorem ipsum dolor sit amet, consectetur adip
+          <br> elit. Adipisci, eaque enim ipsum quam quia vol."</b></p>
 
-      <p class="text"><b>"Lorem ipsum dolor sit amet, consectetur adip
-        <br> elit. Adipisci, eaque enim ipsum quam quia vol."</b></p>
-
-      <ul class="info-list">
-        <li class="info-item"><b>+1-718-310-5588</b></li>
-        <li class="info-item"><a href="">www.yourwebsite.com</a> </li>
-        <li class="info-item"><p>769 Prudence Street Lincoln Park, Ml 48146</p></li>
-      </ul>
+        <ul class="info-list">
+          <li class="info-item"><b>+1-718-310-5588</b></li>
+          <li class="info-item"><a href="">www.yourwebsite.com</a> </li>
+          <li class="info-item"><p>769 Prudence Street Lincoln Park, Ml 48146</p></li>
+        </ul>
+      </div>
     </div>
     <div class="refer">
-      <h2><b>REFERENCES</b></h2>
+      <div class="acardeon justify-content-between">
+        <h2><b>REFERENCES</b></h2>
+        <span class="arrow"> > </span>
+      </div>
       <div class="underline"></div>
-      <ul class="contact-list">
-        <li class="contact-item">
-          <span class="decorator"></span>
-          <div class="info">
-            <h3 class="name">DARWIN B. MAGANA</h3>
-            <p class="address">2813 Shobe Lane Mancos, CO.</p>
-            <p class="tel">Tel: +1-970-533-3393</p>
-            <p class="email">Email: www.yourwebsite.com</p>
-          </div>
-        </li>
+      <div class="content">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="decorator"></span>
+            <div class="info">
+              <h3 class="name">DARWIN B. MAGANA</h3>
+              <p class="address">2813 Shobe Lane Mancos, CO.</p>
+              <p class="tel">Tel: +1-970-533-3393</p>
+              <p class="email">Email: www.yourwebsite.com</p>
+            </div>
+          </li>
 
-        <li class="contact-item">
-          <span class="decorator"></span>
-          <div class="info">
-            <h3 class="name">ROBERT J. BELVIN</h3>
-            <p class="address">2119 Fairfax Drive Newark, NJ.</p>
-            <p class="tel">Tel: +1-908-987-5103</p>
-            <p class="email">Email: www.yourwebsite.com</p>
-          </div>
-        </li>
-      </ul>
+          <li class="contact-item">
+            <span class="decorator"></span>
+            <div class="info">
+              <h3 class="name">ROBERT J. BELVIN</h3>
+              <p class="address">2119 Fairfax Drive Newark, NJ.</p>
+              <p class="tel">Tel: +1-908-987-5103</p>
+              <p class="email">Email: www.yourwebsite.com</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
 
 
       <div class="exp">
-  <h2><b>JOB EXPERIENCE</b></h2>
+  <div class="acardeon justify-content-between">
+    <h2><b>JOB EXPERIENCE</b></h2>
+    <span class="arrow"> > </span>
+  </div>
   <div class="underline"></div>
-  <ul class="experience-list">
+  <div class="content">
+    <ul class="experience-list">
 
-    <li class="experience-item">
-      <span class="decorator"></span>
-      <div class="content">
-        <div class="header-line">
-          <div class="title-location fst-italic">
-            <h3 class="company">Creative Agency</h3>
-            <p class="location">Chicago</p>
+      <li class="experience-item">
+        <span class="decorator"></span>
+        <div class="content">
+          <div class="header-line">
+            <div class="title-location fst-italic">
+              <h3 class="company">Creative Agency</h3>
+              <p class="location">Chicago</p>
+            </div>
+            <span class="date">2021 - Present</span>
           </div>
-          <span class="date">2021 - Present</span>
+          <h4 class="position">SENIOR WEB DESIGNER</h4>
+          <p class="description">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
         </div>
-        <h4 class="position">SENIOR WEB DESIGNER</h4>
-        <p class="description">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>
-      </div>
-    </li>
+      </li>
 
-    <li class="experience-item">
-      <span class="decorator"></span>
-      <div class="content">
-        <div class="header-line">
-          <div class="title-location fst-italic">
-            <h3 class="company">Creative Market</h3>
-            <p class="location">United Kingdom</p>
+      <li class="experience-item">
+        <span class="decorator"></span>
+        <div class="content">
+          <div class="header-line">
+            <div class="title-location fst-italic">
+              <h3 class="company">Creative Market</h3>
+              <p class="location">United Kingdom</p>
+            </div>
+            <span class="date">2018 - 2021</span>
           </div>
-          <span class="date">2018 - 2021</span>
+          <h4 class="position">GRAPHIC DESIGNER</h4>
+          <p class="description">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
         </div>
-        <h4 class="position">GRAPHIC DESIGNER</h4>
-        <p class="description">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>
-      </div>
-    </li>
+      </li>
 
-    <li class="experience-item">
-      <span class="decorator"></span>
-      <div class="content">
-        <div class="header-line">
-          <div class="title-location fst-italic">
-            <h3 class="company">Marketing Agency</h3>
-            <p class="location">United Kingdom</p>
+      <li class="experience-item">
+        <span class="decorator"></span>
+        <div class="content">
+          <div class="header-line">
+            <div class="title-location fst-italic">
+              <h3 class="company">Marketing Agency</h3>
+              <p class="location">United Kingdom</p>
+            </div>
+            <span class="date">2015 - 2018</span>
           </div>
-          <span class="date">2015 - 2018</span>
+          <h4 class="position">MARKETING MANAGER</h4>
+          <p class="description">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
         </div>
-        <h4 class="position">MARKETING MANAGER</h4>
-        <p class="description">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>
-      </div>
-    </li>
+      </li>
 
-    <li class="experience-item">
-      <span class="decorator"></span>
-      <div class="content">
-        <div class="header-line">
-          <div class="title-location fst-italic">
-            <h3 class="company">Creative Market</h3>
-            <p class="location">Chicago</p>
+      <li class="experience-item">
+        <span class="decorator"></span>
+        <div class="content">
+          <div class="header-line">
+            <div class="title-location fst-italic">
+              <h3 class="company">Creative Market</h3>
+              <p class="location">Chicago</p>
+            </div>
+            <span class="date">2013 - 2015</span>
           </div>
-          <span class="date">2013 - 2015</span>
+          <h4 class="position">JUNIOR WEB DESIGNER</h4>
+          <p class="description">
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+          </p>
         </div>
-        <h4 class="position">JUNIOR WEB DESIGNER</h4>
-        <p class="description">
-          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-        </p>
-      </div>
-    </li>
+      </li>
 
-  </ul>
+    </ul>
+  </div>
 </div>
     </div>
     <div class="sidebar col-4">
@@ -356,7 +374,7 @@
 
 
 
-<script src="./js/index.min.js"></script>
+<script src="./js/main.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

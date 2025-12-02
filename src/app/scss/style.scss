@@ -1,3 +1,4 @@
+@use './mixins.scss' as *;
 @use './main/me.scss';
 @use './main/exp.scss';
 @use './sidebar/edu.scss';
@@ -29,8 +30,7 @@ ul {
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  @include a-style;
 }
 
 .main {
@@ -44,4 +44,27 @@ a {
 
 .title {
   margin-top: 40px;
+}
+
+.underline {
+  width: 100%;
+  height: 1.5px;
+  background-color: black;
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+.acardeon {
+  display: flex;
+
+
+}
+
+.arrow {
+  height: 40px;
+
+  font-size: 30px;
+  font-weight: 300;
+
+  margin-bottom: 10px;
 }

@@ -2,9 +2,13 @@
   <div class="col-6 name">
     <div class="name-section">
       <div class="name-heading">
-        <span class="first-name">GARY T.</span>
-        <span class="last-name">WALTON</span>
+        <span class="first-name" id="first-name"></span> <!--   ОСЬ ТУТ ВИДНО РОБОТУ JS   -->
+        <span class="last-name" id="last-name"></span> <!--   ОСЬ ТУТ ВИДНО РОБОТУ JS   -->
       </div>
+<!--      <button onclick="toggleVisibility()">Toggle Content</button>-->
+<!--      <div id="myVisibleContent">-->
+<!--        This content will be hidden, but still take up space.-->
+<!--      </div>-->
       <p class="work-title">GRAPHIC & WEB DESIGNER</p>
       <div class="underline"></div> </div>
     <img
@@ -14,47 +18,56 @@
   </div>
   <div class="col-6 abt">
     <div class="aboutMe">
-      <h2><b>ABOUT ME</b></h2>
+      <div class="acardeon justify-content-between">
+        <h2><b>ABOUT ME</b></h2>
+        <span class="arrow"> > </span>
+      </div>
       <div class="underline"></div>
+      <div class="content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          Accusantium aliquam aliquid atque debitis dolorem esse eveniet
+          fugit itaque maxime nihil, odit provident
+          quidem quisquam quod rem sed suscipit tempora vel! Illo.</p>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-        Accusantium aliquam aliquid atque debitis dolorem esse eveniet
-        fugit itaque maxime nihil, odit provident
-        quidem quisquam quod rem sed suscipit tempora vel! Illo.</p>
+        <p class="text"><b>"Lorem ipsum dolor sit amet, consectetur adip
+          <br> elit. Adipisci, eaque enim ipsum quam quia vol."</b></p>
 
-      <p class="text"><b>"Lorem ipsum dolor sit amet, consectetur adip
-        <br> elit. Adipisci, eaque enim ipsum quam quia vol."</b></p>
-
-      <ul class="info-list">
-        <li class="info-item"><b>+1-718-310-5588</b></li>
-        <li class="info-item"><a href="">www.yourwebsite.com</a> </li>
-        <li class="info-item"><p>769 Prudence Street Lincoln Park, Ml 48146</p></li>
-      </ul>
+        <ul class="info-list">
+          <li class="info-item"><b>+1-718-310-5588</b></li>
+          <li class="info-item"><a href="">www.yourwebsite.com</a> </li>
+          <li class="info-item"><p>769 Prudence Street Lincoln Park, Ml 48146</p></li>
+        </ul>
+      </div>
     </div>
     <div class="refer">
-      <h2><b>REFERENCES</b></h2>
+      <div class="acardeon justify-content-between">
+        <h2><b>REFERENCES</b></h2>
+        <span class="arrow"> > </span>
+      </div>
       <div class="underline"></div>
-      <ul class="contact-list">
-        <li class="contact-item">
-          <span class="decorator"></span>
-          <div class="info">
-            <h3 class="name">DARWIN B. MAGANA</h3>
-            <p class="address">2813 Shobe Lane Mancos, CO.</p>
-            <p class="tel">Tel: +1-970-533-3393</p>
-            <p class="email">Email: www.yourwebsite.com</p>
-          </div>
-        </li>
+      <div class="content">
+        <ul class="contact-list">
+          <li class="contact-item">
+            <span class="decorator"></span>
+            <div class="info">
+              <h3 class="name">DARWIN B. MAGANA</h3>
+              <p class="address">2813 Shobe Lane Mancos, CO.</p>
+              <p class="tel">Tel: +1-970-533-3393</p>
+              <p class="email">Email: www.yourwebsite.com</p>
+            </div>
+          </li>
 
-        <li class="contact-item">
-          <span class="decorator"></span>
-          <div class="info">
-            <h3 class="name">ROBERT J. BELVIN</h3>
-            <p class="address">2119 Fairfax Drive Newark, NJ.</p>
-            <p class="tel">Tel: +1-908-987-5103</p>
-            <p class="email">Email: www.yourwebsite.com</p>
-          </div>
-        </li>
-      </ul>
+          <li class="contact-item">
+            <span class="decorator"></span>
+            <div class="info">
+              <h3 class="name">ROBERT J. BELVIN</h3>
+              <p class="address">2119 Fairfax Drive Newark, NJ.</p>
+              <p class="tel">Tel: +1-908-987-5103</p>
+              <p class="email">Email: www.yourwebsite.com</p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>

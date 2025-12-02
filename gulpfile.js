@@ -39,7 +39,7 @@ const js_task = () => {
 
 // Таска для SCSS
 const scss_task = () => {
-  return src('src/app/scss/*.scss')
+  return src('src/app/scss/style.scss')
     .pipe(sass({includePaths: [bootstrapSassPath]}).on('error', sass.logError))
     .pipe(cssnano())
     .pipe(rename({ suffix: '.min', extname: '.css' }))

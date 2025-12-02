@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+@mixin a-style {
+  text-decoration: none;
+  color: inherit;
+}

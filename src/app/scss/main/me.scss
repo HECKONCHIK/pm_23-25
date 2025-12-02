@@ -1,10 +1,12 @@
+@use '../variables' as *;
+
 .me {
   padding: 40px 0 0 40px;
 
 }
 
 .work {
-  color: #dc0a0a;
+  color: $ring-color;
 
   border-bottom: 2px solid black;
   padding-bottom: 5px;
@@ -25,7 +27,7 @@
   font-family: 'Arial', sans-serif;
   font-size: 50px;
   font-weight: 900;
-  color: #333;
+  color: $text-color-primary;
   letter-spacing: 0.05em;
   margin-bottom: 15px;
 }
@@ -44,20 +46,12 @@
   font-family: 'Arial', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #dc0a0a;
+  color: $ring-color;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   margin-top: 20px;
   margin-bottom: 10px;
   line-height: 1.2;
-}
-
-.underline {
-  width: 100%;
-  height: 1.5px;
-  background-color: black;
-  margin-top: 5px;
-  margin-bottom: 40px;
 }
 
 //ABOUT ME
@@ -104,7 +98,7 @@
     left: -5.5px;
     width: 10px;
     height: 10px;
-    background-color: #e51d28;
+    background-color: $ring-color;
   }
 }
 
@@ -121,24 +115,22 @@
     margin-bottom: 10px;
   }
 }
-/* Стилі для імені */
+
 .name {
   font-size: 1.1em;
-  font-weight: 900; /* Дуже жирний */
+  font-weight: 900;
   color: #333;
   margin: 0 0 5px 0;
   text-transform: uppercase;
 }
 
-/* Стилі для адреси (червоний колір) */
 .address {
-  color: #e51d28; /* Червоний колір */
+  color: $ring-color;
   font-weight: 500;
   font-size: 1em;
   margin: 0 0 10px 0;
 }
 
-/* Стилі для телефону та email */
 .tel, .email {
   color: #555;
   font-size: 0.9em;
