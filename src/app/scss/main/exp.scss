@@ -19,9 +19,12 @@
   padding-top: 15px;
 
   border-left: 2.5px solid black;
-  height: auto;
+  height: 149px;
   margin-right: 15px;
   position: relative;
+  &:not(:last-child) {
+    height: 170px;
+  }
   &:before {
     content: '';
     position: absolute;

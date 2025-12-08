@@ -1,13 +1,13 @@
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
-const arrows = document.querySelectorAll(".arrow");
 const expList = document.querySelector(".experience-list");
+const arrows = document.querySelectorAll(".arrow");
 
-const name = 'GARY T.';
-const surname = 'WALTON'
-
-firstName.textContent = name;
-lastName.textContent = surname;
+// const name = 'GARY T.';
+// const surname = 'WALTON'
+//
+// firstName.textContent = name;
+// lastName.textContent = surname;
 
 arrows.forEach(function(arrow) {
   arrow.addEventListener("click", function() {
@@ -30,42 +30,48 @@ arrows.forEach(function(arrow) {
   });
 });
 
+const getName = async() => {
 
-const work = [
-  {
-    comp: 'Creative Agency',
-    loc: 'Chicago',
-    pos: 'SENIOR WEB DESIGNER',
-    date: '2021 - Present',
-    desc: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-  },
-  {
-    comp: 'Creative Market',
-    loc: 'United Kingdom',
-    pos: 'GRAPHIC DESIGNER',
-    date: '2018 - 2021',
-    desc: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-  },
-  {
-    comp: 'Marketing Agency',
-    loc: 'United Kingdom',
-    pos: 'MARKETING MANAGER',
-    date: '2015 - 2018',
-    desc: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
-  },
-  {
-    comp: 'Creative Market',
-    loc: 'Chicago',
-    pos: 'JUNIOR WEB DESIGNER',
-    date: '2013 - 2015',
-    desc: 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.'
+  try {
+    const response = await fetch("/name.json")
+
+    if (!response.ok) {
+      throw new Error(`file not found: ${response.status}`)
+    }
+
+    const data = await response.json()
+
+    firstName.textContent = data.firstName;
+    lastName.textContent = data.secondName;
+
+  } catch (err) {
+    console.log("Помилка:", err);
   }
-];
+}
+  const getJob = async() => {
+    try {
+      const response = await fetch("/jobs.json")
 
-let listHTML = '';
+      if (!response.ok) {
+        throw new Error(`file not found: ${response.status}`)
+      }
 
-work.forEach(function(job) {
-  listHTML += `
+      const data = await response.json();
+
+      doList(data);
+
+      console.log(data);
+
+    } catch (err) {
+      console.log("Помилка:", err)
+    }
+  }
+
+  const doList = async(jobs) => {
+    let listHTML = '';
+
+    jobs.forEach(function(job) {
+      listHTML += `
     <li class="experience-item">
       <span class="decorator"></span>
       <div class="content">
@@ -83,8 +89,12 @@ work.forEach(function(job) {
       </div>
    </li>
   `;
-})
+    })
 
 // console.log(listHTML);
 
-expList.innerHTML = listHTML;
+    expList.innerHTML = listHTML;
+  }
+
+  getName();
+  getJob();

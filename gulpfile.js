@@ -36,6 +36,10 @@ const js_task = () => {
     .pipe(browserSync.stream());
 }
 
+const json_task = () => {
+  return src('src/app/*.json')
+    .pipe(dest('dist/'))
+}
 
 // Таска для SCSS
 const scss_task = () => {
@@ -85,7 +89,7 @@ const watch_task = () => {
 }
 
 // Таска build
-const build = series(html_task, parallel(scss_task, js_task, img_task, bootstrapCSS, bootstrapJS));
+const build = series(html_task, parallel(scss_task, js_task, json_task, img_task, bootstrapCSS, bootstrapJS));
 
 // Експортуємо таску build
 exports.build = build;

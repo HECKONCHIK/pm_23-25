@@ -1,0 +1,30 @@
+[
+  {
+    "comp": "Creative Agency",
+    "loc": "Chicago",
+    "pos": "SENIOR WEB DESIGNER",
+    "date": "2021 - Present",
+    "desc": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  {
+    "comp": "Creative Market",
+    "loc": "United Kingdom",
+    "pos": "GRAPHIC DESIGNER",
+    "date": "2018 - 2021",
+    "desc": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  {
+  "comp": "Marketing Agency",
+  "loc": "United Kingdom",
+  "pos": "MARKETING MANAGER",
+  "date": "2015 - 2018",
+  "desc": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  },
+  {
+    "comp": "Creative Market",
+    "loc": "Chicago",
+    "pos": "JUNIOR WEB DESIGNER",
+    "date": "2013 - 2015",
+    "desc": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+  }
+]
