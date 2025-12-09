@@ -36,6 +36,7 @@ const js_task = () => {
     .pipe(browserSync.stream());
 }
 
+// Таска JSON
 const json_task = () => {
   return src('src/app/*.json')
     .pipe(dest('dist/'))
